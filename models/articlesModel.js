@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
-const ArticleSchema = mongoose.Schema({
+const ArticleSchema = new mongoose.Schema({
     author: {
         type: String,
         required: true
@@ -37,6 +37,4 @@ const ArticleSchema = mongoose.Schema({
 
 });
 
-const Article = mongoose.model('Article', ArticleSchema);
-
-export default Article;
+module.exports = mongoose.model('Article', ArticleSchema);
