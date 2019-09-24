@@ -1,40 +1,115 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></meta>
+    <title>untitled1</title>
+  </head>
+  <body>
+  <script src="app.js"></script>
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Submit')">Submite</button>
+  <button class="tablinks" onclick="openTab(event, 'Search')" id="defaultOpen">Search</button>
+            <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+            </script>
+  <button class="tablinks" onclick="openTab(event, 'Exit')">Exit</button>
+</div>
 
-<head>
-  <title>Page Title</title>
-</head>
+<div id="Submit" class="tabcontent">
+  <h3>Submit Detail</h3>
+   <span onclick="this.parentElement.style.display='none'">Back</span>
+</div>
 
-<body>
-  
-  <h1>SERIER</h1>
-  <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#about">Insert</a>
-    <a href="#contact">Search</a>
-  </div>
-  <p>Search...</p>
-  <form>
-    Description:<br>
-    <input type="text" name="Description"><br>
+<div id="Search" class="tabcontent">
+  <h3>Search</h3>
+  <form action="untitled1.html" style="font-size:medium;">
+      <p>
+        Description<input type="text" name="des" style="font-size:medium;"
+                          size="75"/>
+      </p>
+      <p>
+        Date Range from<input type="text" name="dateFrom"/>
+         to 
+        <input type="text" name="dateTo"/>
+      </p>
+      <p>
+        If&nbsp;bibtextFilde 
+        <select size="1" name="bibTxtSearchItem">
+          <option value="article">
+            article
+          </option>
+          <option value="auter">
+            auter
+          </option>
+          <option value="title">
+            title
+          </option>
+          <option value="journal">
+            journal
+          </option>
+          <option value="year">
+            year
+          </option>
+          <option value="volume">
+            volume
+          </option>
+          <option value="number">
+            number
+          </option>
+          <option value="pages">
+            pages
+          </option>
+          <option value="month">
+            month
+          </option>
+        </select>
+         operator<select size="1" name="oprateFilde">
+         <option value="if1">
+            contains
+          </option>
+          <option value="if2">
+            dose not contains
+          </option>
+          <option value="if3">
+            begins with
+          </option>
+          <option value="if4">
+            end with
+          </option>
+          <option value="if5">
+            is equat to
+          </option>
+          <option value="if6">
+            is less than
+          </option>
+          <option value="if7">
+            is less than or equal
+          </option>
+          <option value="if8">
+            more than or equal
+          </option>
+        </select>
+         value<input type="text" name="ifValue"/>
+      </p>
+      <button type="button">
+        Add
+      </button>
+      <button type="button">
+        Delete
+      </button>
     </form>
-  <select name="Bibtex">
-    <option value="author">author</option>
-    <option value="title">title</option>
-    <option value="journal">journal</option>
-    <option value="year">year</option>
-    <option value="volume">volume</option>
-    <option value="number">number</option>
-    <option value="pages">pages</option>
-  </select>
-  <div class="dropup">
-      <button class="dropbtn">Dropup</button>
-      <div class="dropup-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div>
-</body>
+  <span onclick="this.parentElement.style.display='none'">Back</span>
+</div>
 
+<div id="Exit" class="tabcontent">
+ 
+  <span onclick="this.parentElement.style.display='none'">Back</span>
+</div>
+
+
+    
+  </body>
 </html>
