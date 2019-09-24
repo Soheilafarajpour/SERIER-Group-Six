@@ -1,7 +1,11 @@
-import express from 'express';
-import Article from '../models/articlesModel.js';
-import jwt from 'jsonwebtoken';
-import config from '../config.js';
+//import express from 'express';
+//import Article from '../models/articlesModel.js';
+//import jwt from 'jsonwebtoken';
+//import config from '../config.js';
+const express = require('express');
+const Article = require('../models/Article.js');
+const jwt = require('jsonwebtoken');
+const config = require('../congif.js');
 
 let router = express.Router();
 
@@ -102,4 +106,4 @@ router.delete('/delete/:id', isAuthenticated, (req, res) => {
     });
 });
 
-export default router;
+//export default router;

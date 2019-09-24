@@ -1,8 +1,13 @@
-import express from 'express';
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import User from '../models/usersModel.js';
-import config from '../config';
+//import express from 'express';
+//import bcrypt from 'bcryptjs';
+//import jwt from 'jsonwebtoken';
+//import User from '../models/usersModel.js';
+//import config from '../config';
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const User = require('../models/usersModel.js');
+const config = require('../congif.js');
 
 const router = express.Router();
 
