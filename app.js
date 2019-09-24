@@ -1,13 +1,24 @@
+/*
+// Yongmi 20190925
 import express from 'express';
-
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-
 import Article from './models/articlesModel.js';
 import articles from './routes/articlesRoute.js'
 import users from './routes/usersRoute.js'
+*/
 
-mongoose.connect('mongodb://localhost/basic-mern-app');
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
+const Article = require('./models/articlesModel.js');
+const articles = require('./routes/articlesRoute.js');
+const users = require('./routes/usersRoute.js');
+
+//mongoose.connect('mongodb://localhost/basic-mern-app');
+mongoose.connect('mongodb+srv://serler:serlersdm@cluster0-bwx14.mongodb.net/test?retryWrites=true&w=majority');
+
 let db = mongoose.connection;
 
 db.once('open', () => {
